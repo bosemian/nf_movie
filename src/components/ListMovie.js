@@ -9,7 +9,6 @@ import ListMovieItem from './ListMovieItem.js';
 class ListMovie extends Component {
 
     render() {
-        console.log(dataMovie.shows_first)
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>MyList</Text>

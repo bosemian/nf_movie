@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 import ListMovie from './components/ListMovie';
+import Slider from './components/Slider';
 
 // create a component
 class App extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Slider />
                 <ListMovie />
             </View>
             
@@ -19,7 +21,7 @@ class App extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#2c3e50'
+        backgroundColor: '#131418'
     }
 })
 
