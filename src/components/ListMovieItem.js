@@ -5,9 +5,9 @@ import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 // create a component
 class ListMovieItem extends Component {
 
-    renderItem = (item) => {
+    renderItem({item}){
         return (
-            <Image style={styles.movieImage} source={{ uri: item.image }} />
+            <Image key={item.key} style={styles.movieImage} source={{ uri: item.image }} />
         )
     }
 
@@ -18,7 +18,7 @@ class ListMovieItem extends Component {
                 <FlatList 
                     horizontal
                     ItemSeparatorComponent={() => <View style={{ width: 5 }} />}
-                    renderItem={({item}) => this.renderItem(item)}
+                    renderItem={this.renderItem}
                     data={movie}/>
             </View>
             

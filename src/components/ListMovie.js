@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import dataMovie from './dataMovie.js';
 
 import ListMovieItem from './ListMovieItem.js';

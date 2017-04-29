@@ -1,28 +1,47 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableNativeFeedback, Image } from 'react-native';
 
-import Icon from 'react-native-vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+const Logo = `<Image style={styles.logo} source={require('../../images/user.png')} />`
 
 class Header extends Component {
     render() {
         return (
             <View style={styles.container}>
-                
+                <TouchableNativeFeedback onPress={() => this.props.toggle()}>
+                    <Icon 
+                        name="bars"
+                        color="white"
+                        size={25} />
+
+                </TouchableNativeFeedback>
+                <Text style={styles.logo}>NETFLIX</Text>
+                <Icon 
+                    name="search"
+                    color="white"
+                    size={25} />
             </View>
         );
     }
 }
 
-// define your styles
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
+        flexDirection: 'row',
+        height: 60,
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        justifyContent: 'space-between',
+        marginHorizontal: 15
     },
-});
+    logo: {
+        width: 120,
+        height: 40,
+        color: 'red',
+        fontSize: 30,
+    }
+})
 
 //make this component available to the app
 export default Header;
