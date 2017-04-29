@@ -2,28 +2,27 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import ListMovie from './components/ListMovie';
-import Slider from './components/Slider';
-import Header from './components/Header';
-// create a component
-class App extends Component {
+import Icon from 'react-native-vector-icons';
+
+class Header extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Slider />
-                <ListMovie />
+                
             </View>
-            
         );
     }
 }
 
+// define your styles
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#131418'
-    }
-})
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#2c3e50',
+    },
+});
 
 //make this component available to the app
-export default App;
+export default Header;

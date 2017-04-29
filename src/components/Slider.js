@@ -13,7 +13,6 @@ const imageSlider = [
 // create a component
 class Slider extends Component {
     render() {
-        console.log(imageSlider)
         return (
             <View>
                 <Swiper 
