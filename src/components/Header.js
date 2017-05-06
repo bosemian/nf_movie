@@ -6,11 +6,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Logo = `<Image style={styles.logo} source={require('../../images/user.png')} />`
 
-class Header extends Component {
-    render() {
-        return (
+const Header = (props) => {
+    return (
             <View style={styles.container}>
-                <TouchableNativeFeedback onPress={() => this.props.toggle()}>
+                <TouchableNativeFeedback onPress={() => props.toggle()}>
                     <Icon 
                         name="bars"
                         color="white"
@@ -23,8 +22,7 @@ class Header extends Component {
                     color="white"
                     size={25} />
             </View>
-        );
-    }
+    );
 }
 
 const styles = StyleSheet.create({
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
         height: 60,
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginHorizontal: 15
+        paddingHorizontal: 15
     },
     logo: {
         width: 120,

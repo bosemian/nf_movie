@@ -24,14 +24,16 @@ class App extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <View style={styles.wrapper}>
                 <SideMenu 
-                    menu={Menu}
+                    menu={<Menu />}
                     isOpen={this.state.isOpen}
                     onChange={isOpen => this.updateMenu(isOpen)} >
+                    <View style={styles.container}>
                         <Header toggle={this.toggle} />
                         <Slider />
                         <ListMovie />
+                    </View>
                 </SideMenu>
             </View>
             
@@ -40,9 +42,12 @@ class App extends Component {
 }
 
 const styles = StyleSheet.create({
+    wrapper: {
+        flex: 1
+    },
     container: {
         flex: 1,
-        backgroundColor: '#131418'
+        backgroundColor: '#000'
     }
 })
 
