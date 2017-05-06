@@ -6,6 +6,12 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import IonIcons from 'react-native-vector-icons/Ionicons'
 
 const { width, height } = Dimensions.get('window')
+//Todo change style in react-native-sidemenu 
+/*overlay: {
+    ...absoluteStretch,
+    backgroundColor: 'black',
+    opacity: 0.7
+},*/
 
 class Menu extends Component {
     
